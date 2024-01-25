@@ -10,10 +10,10 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import 'swiper/swiper-bundle.css'; // Import Swiper styles
 
-const Category = () => {
+const Card2 = () => {
   return (
     <section className="mt-24">
-      <h1 className="font-bold text-4xl text-start pl-48">Events This Week</h1>
+      <h1 className="font-bold text-4xl text-start pl-48">Trending</h1>
 
       <div className="flex items-center justify-center flex-col">
         <Swiper
@@ -79,4 +79,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Card2;
