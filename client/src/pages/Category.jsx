@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { FreeMode, Pagination, Navigation } from 'swiper/modules';
 
 import { ServiceData } from '../constants';
 import { FaHome, FaPaypal } from 'react-icons/fa';
@@ -13,7 +13,7 @@ import 'swiper/swiper-bundle.css'; // Import Swiper styles
 const Category = () => {
   return (
     <section className="mt-24">
-      <h1 className="font-bold text-4xl text-start pl-48">Events This Week</h1>
+      <h1 className="font-bold text-4xl text-start pl-48">Trending</h1>
 
       <div className="flex items-center justify-center flex-col">
         <Swiper
@@ -28,10 +28,14 @@ const Category = () => {
             },
           }}
           freeMode={true}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
           pagination={{
             clickable: true,
           }}
-          modules={[FreeMode, Pagination]}
+          modules={[FreeMode, Pagination, Navigation]}
           className="max-w-[90%] lg:max-w-[80%]"
           autoplay={{ delay: 3000 }}
         >
@@ -73,6 +77,8 @@ const Category = () => {
               </div>
             </SwiperSlide>
           ))}
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
         </Swiper>
       </div>
     </section>
